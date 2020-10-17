@@ -22,15 +22,10 @@ public class Home_layout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                MeusAnuncios_LayoutActivity();
+                startActivity(new Intent(Home_layout.this, anuncio_layout.class));
 
             }
 
         });
-    }
-
-    private void MeusAnuncios_LayoutActivity() {
-
-        startActivity(new Intent(Home_layout.this, anuncio_layout.class));
     }
 }
