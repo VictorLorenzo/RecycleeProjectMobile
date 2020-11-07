@@ -7,391 +7,608 @@
     android:background="#FFFFFF"
     tools:context=".Home_layout">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Pesquisar"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="323dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="24dp"
-        android:background="#77B255"
-        android:textColorHint="#FFFFFF"
-        app:boxBackgroundColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
-            android:hint="Pesquisar"
-            android:textColorHint="#FFFFFF" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical" >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="221dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Pesquisar">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-        <TextView
-            android:id="@+id/MeusAnuncios"
-            android:layout_width="187dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Meus anúncios"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.044"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/MeusAnuncios_Layout"
-            android:layout_width="120dp"
-            android:layout_height="172dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat"
-                android:text="1 Placa Mãe"
-                android:textColor="#000000"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#77B255"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    android:layout_weight="1"/>
 
                 <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="100dp"
-                    android:layout_height="95dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/iconpc3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:id="@+id/imageView4"
+                    android:layout_width="235dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/component_16" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="#3568B5" />
+
+            <EditText
+                android:id="@+id/PesquisarInput"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/roundedinputgreen"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_bold"
+                android:hint="Pesquisar"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat"
-                android:text="Anderson Silva"
-                android:textColor="#000000"
-                android:textSize="8sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-                app:layout_constraintVertical_bias="0.037"
-                app:srcCompat="@drawable/star" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.878"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/setaesquerda"
-            tools:ignore="VectorDrawableCompat" />
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toEndOf="@+id/imageView11"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/setadireita"
-            tools:ignore="VectorDrawableCompat" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="221dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="187dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Anúncios"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.044"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="120dp"
-            android:layout_height="172dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/Anuncios_Layout"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#77B255"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="100dp"
-                    android:layout_height="95dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/iconpc3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:id="@+id/Esq1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/setaesquerda"
+                    tools:ignore="VectorDrawableCompat" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat"
-                android:text="1 Placa Mãe"
-                android:textColor="#000000"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Anuncios_Layout" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat"
-                android:text="Anderson Silva"
-                android:textColor="#000000"
-                android:textSize="8sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="18sp"
-                android:layout_height="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/Anuncios_Layout"
-                app:layout_constraintVertical_bias="0.235"
-                app:srcCompat="@drawable/star" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.747"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/setaesquerda"
-            tools:ignore="VectorDrawableCompat" />
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.565"
-            app:layout_constraintStart_toEndOf="@+id/imageView15"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/setadireita"
-            tools:ignore="VectorDrawableCompat" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="249dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="187dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Localidades"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.045"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Localidades_Layout"
-            android:layout_width="119dp"
-            android:layout_height="202dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout6"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#77B255"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="252dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Lixos Eletrônico"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
 
                 <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="70dp"
-                    android:layout_height="81dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/iconlocal" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:id="@+id/Dir1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/setadireita"
+                    tools:ignore="VectorDrawableCompat" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat"
-                android:text="ERS do Brasil"
-                android:textColor="#000000"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.095"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="92dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat"
-                android:text="Av. do Futuro, 1565 - Tarumã, Manaus - AM, 69041-005"
-                android:textColor="#000000"
-                android:textSize="8sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.241"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7"
-                app:layout_constraintVertical_bias="0.0" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/line_28" />
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="18sp"
-                android:layout_height="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
-                app:layout_constraintVertical_bias="0.125"
-                app:srcCompat="@drawable/star" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="173dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
 
-        <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.736"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/setaesquerda"
-            tools:ignore="VectorDrawableCompat" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/setadireita"
-            tools:ignore="VectorDrawableCompat" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <LinearLayout
+                        android:id="@+id/View1"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC1"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View2"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC2"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View3"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC3"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Esq2"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/setaesquerda"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="252dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Meus anúncios"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/Dir2"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/setadireita"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/line_28"
+                android:layout_gravity="start"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View4"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC4"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View5"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC5"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View6"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC6"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Esq3"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/setaesquerda"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="252dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Localidades"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/Dir3"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/setadireita"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/line_28" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View7"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC7"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_margin="10dp"
+                            app:srcCompat="@drawable/iconlocal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="Descarte Correto"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LayouLocalidades2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View8"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC8"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_margin="10dp"
+                            app:srcCompat="@drawable/iconlocal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="Descarte Correto"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LayouLocalidades3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View9"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC9"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_margin="10dp"
+                            app:srcCompat="@drawable/iconlocal" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="Descarte Correto"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

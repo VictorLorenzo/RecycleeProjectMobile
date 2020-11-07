@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startMainMenuScreen(FirebaseUser firebaseUser){
-        String msg = "Iniciando Tela principal do app.";
-        Toast.makeText(MainActivity.this, msg,Toast.LENGTH_LONG).show();
+
     }
 }

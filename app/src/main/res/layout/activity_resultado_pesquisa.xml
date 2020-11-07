@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultadoPesquisa"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="235dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/component_16" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="#3568B5" />
+
+            <EditText
+                android:id="@+id/ResultadoInput"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/roundedinputgreen"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_bold"
+                android:hint="Placa Mãe"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Esq1R"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/setaesquerda"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/Resultados"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="85dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Resultados"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/Dir1R"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/setadireita"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/listra"
+                android:layout_width="395dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/line_28" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="173dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View1R"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC1R"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text1R"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText1R"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View2R"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC2R"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text2R"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText2R"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/View3R"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/roundedinputgreen"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ImagemPC3R"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/iconpc3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Text3R"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/montserrat2"
+                        android:text="1 Placa Mãe"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SText3R"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Anderson Silva"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".anuncio_layout">
+    tools:context=".meus_anuncios">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,21 +16,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#000000"
             android:orientation="horizontal"
-            android:weightSum="2"
-            android:background="#000000">
+            android:weightSum="2">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="#000000"
                 android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                android:layout_weight="1" />
+                android:theme="?attr/actionBarTheme" />
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -41,7 +43,7 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/view1"
+            android:id="@+id/view3"
             android:layout_width="match_parent"
             android:layout_height="14dp"
             android:background="#3568B5" />
@@ -70,8 +72,6 @@
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="7dp"
                 app:srcCompat="@drawable/star_3" />
-
-
         </LinearLayout>
 
         <View
@@ -96,7 +96,6 @@
                 android:layout_height="170dp"
                 app:srcCompat="@drawable/iconpc3" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="315dp"
             android:layout_height="184dp"
@@ -138,14 +137,29 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/Entrar_Contato"
-            android:layout_width="315dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/roundedbutton"
+            android:id="@+id/Editar_Anuncio"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/roundedbluebuttonblue"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Entrar em contato"
+            android:text="Editar Anúncio"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Excluir_Anuncio"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedredbuttonred"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Excluir Anúncio"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textIsSelectable="false"

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+    tools:context=".popup"
+    android:background="@drawable/background_popup">
+
+
+    <TextView
+        android:id="@+id/Desejar"
+        android:layout_width="217dp"
+        android:layout_height="58dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:text='Deseja publicar o anúncio "(Título)"?'
+        android:textColor="#4E9610"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Desejar"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Cancelar"
+        android:textColor="#1E3510"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/Desejar"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundedbutton"
+        android:fontFamily="@font/montserrat"
+        android:text="Sim"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+

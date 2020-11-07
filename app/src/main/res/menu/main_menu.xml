@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+
+
+        <item
+            android:id="@+id/Conta"
+            android:title="Conta" />
+
+        <item
+            android:id="@+id/Criaranuncio"
+            android:title="Criar Anuncio"/>
+
+        <item
+            android:id="@+id/Anuncio"
+            android:title="Anuncio"/>
+
+        <item
+            android:id="@+id/Meusanuncios"
+            android:title="Meus anúncios"/>
+
+        <item
+            android:id="@+id/Localidades"
+            android:title="Localidades"/>
+
+        <item
+            android:id="@+id/Favoritos"
+            android:title="Favoritos"/>
+
+    </group>
+
+    <group android:checkableBehavior="none">
+
+    </group>
+
+
+</menu>
