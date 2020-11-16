@@ -37,7 +37,7 @@ public class Home_layout extends AppCompatActivity {
         V1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Home_layout.this, anuncio_layout.class);
+                Intent i = new Intent(Home_layout.this, CriarAnuncio_Layout.class);
                 startActivity(i);
             }
         });

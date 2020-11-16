@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Cadastro_layout extends AppCompatActivity {
 
-    private EditText editsenha, editemail, editendereco, editdescricao;
+    private EditText editsenha, editemail, editendereco, editdescricao, editnome;
     private Button Cadastrabtn;
     private FirebaseAuth auth;
     private LinearLayout LayoutRecebe;
@@ -55,6 +55,12 @@ public class Cadastro_layout extends AppCompatActivity {
             }
         });
 
+        inicializarFirebase();
+
+    }
+
+    private void inicializarFirebase() {
+
     }
 
     private void eventoClicks() {
@@ -76,6 +82,7 @@ public class Cadastro_layout extends AppCompatActivity {
         editemail = (EditText) findViewById(R.id.EmailInpunt);
         editendereco = (EditText) findViewById(R.id.EnderecoInput);
         editdescricao = (EditText) findViewById(R.id.DescricaoInput);
+        editnome = (EditText) findViewById(R.id.NomeInput);
 
         Cadastrabtn = (Button) findViewById(R.id.Cadastro_Button);
 
