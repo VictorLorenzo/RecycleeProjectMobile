@@ -54,7 +54,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/NomeQ_produto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat2"
@@ -107,6 +107,7 @@
 
 
             <TextView
+                android:id="@+id/NomeProduto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -118,7 +119,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/NomePessoa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -129,7 +130,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/Descricao"
                 android:layout_width="277dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

@@ -29,7 +29,7 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/Publicar_sim"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_below="@+id/Desejar"

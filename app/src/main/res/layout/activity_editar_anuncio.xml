@@ -55,7 +55,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/NomeQ_produto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat2"
@@ -188,7 +188,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/roundedbutton"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Publicar"
+            android:text="Finalizar"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textIsSelectable="false"
