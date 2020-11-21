@@ -3,12 +3,17 @@ package com.example.recycleeproject_mobile;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CriarAnuncio_Layout extends AppCompatActivity {
 
@@ -16,12 +21,21 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
     private Dialog mDialog;
     public String titulo,ncontato,dproduto;
     public EditText ctitulo,cncontato,cdproduto;
+    private DatabaseReference databaseanuncio;
+    public String idd;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_criar_anuncio__layout);
+
+        SharedPreferences preffs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
+        idd = preffs.getString("id", "não encontrado");
+
+
+
+        databaseanuncio = FirebaseDatabase.getInstance().getReference("usuario").child(idd);
 
         mDialog = new Dialog(this);
         pbtn = (Button) findViewById(R.id.Publicar_Button);
@@ -55,25 +69,25 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
                         ncontato = cncontato.getText().toString().trim();
                         dproduto = cdproduto.getText().toString().trim();
 
-                        Intent i = new Intent(CriarAnuncio_Layout.this, anuncio_layout.class);
-                        Bundle parametros = new Bundle();
+                        guardardados(titulo, ncontato, dproduto);
 
-                        parametros.putString("chave_titulo", titulo);
-                        parametros.putString("chave_contato", ncontato);
-                        parametros.putString("chave_dproduto", dproduto);
-
-                        i.putExtras(parametros);
-
+                        Intent i = new Intent(CriarAnuncio_Layout.this, Home_layout.class);
                         startActivity(i);
 
                     }
                 });
-
-
                         mDialog.show();
 
             }
         });
 
+
+
+    }
+
+    private void guardardados(String titulo, String ncontato, String dproduto) {
+
+        anuncio anuncio = new anuncio(titulo, ncontato, dproduto);
+        databaseanuncio.child("anuncios").child(titulo).setValue(anuncio);
     }
 }

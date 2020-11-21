@@ -19,6 +19,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Cadastro_layout extends AppCompatActivity {
 
@@ -28,12 +30,17 @@ public class Cadastro_layout extends AppCompatActivity {
     private LinearLayout LayoutRecebe;
     private RadioGroup RadioG;
     private RadioButton Onaor,Osimr;
+    private int sno=0;
+    private DatabaseReference databaseusuario;
+    private String id;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_layout);
+        databaseusuario = FirebaseDatabase.getInstance().getReference("usuario");
+
         inicializarComponentes();
         eventoClicks();
 
@@ -44,6 +51,7 @@ public class Cadastro_layout extends AppCompatActivity {
                 LayoutRecebe.setVisibility(View.GONE);
                 editendereco.getText().clear();
                 editdescricao.getText().clear();
+                sno=0;
 
             }
         });
@@ -52,12 +60,15 @@ public class Cadastro_layout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 LayoutRecebe.setVisibility(View.VISIBLE);
+                sno=1;
             }
         });
 
-        inicializarFirebase();
 
+
+        inicializarFirebase();
     }
+
 
     private void inicializarFirebase() {
 
@@ -70,11 +81,26 @@ public class Cadastro_layout extends AppCompatActivity {
                     String email = editemail.getText().toString().trim();
                     String senha = editsenha.getText().toString().trim();
                     criarUser(email, senha);
-
                 }
             });
     }
 
+    private void guardardados(String email, String nome, String localizacao, String descricao) {
+        if(sno==0){
+
+            Usernd usernd = new Usernd(id, nome , email);
+
+            databaseusuario.child(id).setValue(usernd);
+        }
+        else if(sno==1){
+
+            Usercd usercd = new Usercd(id, nome, email, localizacao, descricao);
+
+            databaseusuario.child(id).setValue(usercd);
+
+        }
+
+    }
 
 
     private void inicializarComponentes() {
@@ -83,6 +109,7 @@ public class Cadastro_layout extends AppCompatActivity {
         editendereco = (EditText) findViewById(R.id.EnderecoInput);
         editdescricao = (EditText) findViewById(R.id.DescricaoInput);
         editnome = (EditText) findViewById(R.id.NomeInput);
+
 
         Cadastrabtn = (Button) findViewById(R.id.Cadastro_Button);
 
@@ -96,16 +123,23 @@ public class Cadastro_layout extends AppCompatActivity {
 
 
 
-    private void criarUser(String email, String senha) {
+    private void criarUser(final String email, String senha) {
         auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro_layout.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(Cadastro_layout.this, "Criado com Sucesso", Toast.LENGTH_SHORT).show();
+                    id = auth.getUid();
+
+                    String nome = editnome.getText().toString().trim();
+                    String localizacao = editendereco.getText().toString().trim();
+                    String descricao = editdescricao.getText().toString().trim();
+
+                    guardardados(email, nome, localizacao, descricao);
                     Intent i = new Intent(Cadastro_layout.this, MainActivity.class);
                     startActivity(i);
                 } else {
-                    Toast.makeText(Cadastro_layout.this, "Erro", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Cadastro_layout.this, "Email já utilizado", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -11,16 +11,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/iconeprojeto"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/iconeprojeto_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Excluir_Anuncio"></activity>
         <activity android:name=".layout_dialog" />
         <activity android:name=".Activity_editar_anuncio" />
         <activity android:name=".meus_anuncios" />
-        <activity android:name=".popup" />
         <activity android:name=".Localidades" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

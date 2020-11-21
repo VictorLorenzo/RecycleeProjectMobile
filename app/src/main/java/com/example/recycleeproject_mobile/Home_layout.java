@@ -10,19 +10,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 public class Home_layout extends AppCompatActivity {
 
     private LinearLayout V1,V2,V3,V4,V5,V6,V7,V8,V9;
+    public String id;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
-
 
         V1 = findViewById(R.id.View1);
         V2 = findViewById(R.id.View2);
@@ -37,6 +38,7 @@ public class Home_layout extends AppCompatActivity {
         V1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(Home_layout.this, CriarAnuncio_Layout.class);
                 startActivity(i);
             }

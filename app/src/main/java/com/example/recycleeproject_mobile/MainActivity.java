@@ -3,7 +3,9 @@ package com.example.recycleeproject_mobile;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText Usuario,Senha;
     private Button btnLogin;
     private TextView Cadastro;
+    public String id;
 
 
     @Override
@@ -68,8 +71,17 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
                             startMainMenuScreen(user);
+                            id = mAuth.getUid();
+
+                            SharedPreferences prefs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor ed = prefs.edit();
+                            ed.putString("id", id);
+                            ed.apply();
+
+
                             Intent i = new Intent(MainActivity.this, Home_layout.class);
                             startActivity(i);
+
                         } else {
                             String msg = "Email ou senha incorreto";
                             Toast.makeText(MainActivity.this, msg,Toast.LENGTH_SHORT).show();
