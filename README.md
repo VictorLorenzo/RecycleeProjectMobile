@@ -56,10 +56,10 @@ O público alvo do projeto é tanto empresas que procuram coletar sucatas para a
 ## :recycle: **Funcionalidades**
 <!--ts-->
 
--[x] Cadastro de usuário
--[x] Logar com usuário
--[x] Criar Anúncio
--[x] Visualizar anúncio
+- [x] Cadastro de usuário
+- [x] Logar com usuário
+- [x] Criar Anúncio
+- [x] Visualizar anúncio
 
 
 
