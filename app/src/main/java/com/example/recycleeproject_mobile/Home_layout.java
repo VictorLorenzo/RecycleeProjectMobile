@@ -6,9 +6,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -18,12 +20,16 @@ public class Home_layout extends AppCompatActivity {
 
     private LinearLayout V1,V2,V3,V4,V5,V6,V7,V8,V9;
     public String id;
+    public LinearLayout sidebar;
+    public Dialog mDialog;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+
+        mostrasidebar();
 
         V1 = findViewById(R.id.View1);
         V2 = findViewById(R.id.View2);
@@ -39,7 +45,7 @@ public class Home_layout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Home_layout.this, CriarAnuncio_Layout.class);
+                Intent i = new Intent(Home_layout.this, anuncio_layout.class);
                 startActivity(i);
             }
         });
@@ -104,5 +110,30 @@ public class Home_layout extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void mostrasidebar() {
+        sidebar = findViewById(R.id.sidebar);
+        mDialog = new Dialog(this);
+
+        sidebar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinearLayout criaranunciosidebar;
+                mDialog.setContentView(R.layout.activity_dialog_sidebar);
+
+
+                criaranunciosidebar = (LinearLayout) mDialog.findViewById(R.id.CriarAnuncio_sidebar);
+                criaranunciosidebar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(Home_layout.this, CriarAnuncio_Layout.class);
+                        startActivity(i);
+                    }
+                });
+
+                mDialog.show();
+            }
+        });
     }
 }

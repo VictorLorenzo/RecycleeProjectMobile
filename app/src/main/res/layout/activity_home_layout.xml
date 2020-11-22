@@ -24,18 +24,33 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
+                <LinearLayout
+                    android:id="@+id/sidebar"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="53dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/sideline"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
+                    android:layout_width="93dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:background="#000000"
                     android:minHeight="?attr/actionBarSize"
-                    android:theme="?attr/actionBarTheme"
-                    android:layout_weight="1"/>
+                    android:theme="?attr/actionBarTheme" />
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="235dp"
+                    android:layout_width="151dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"

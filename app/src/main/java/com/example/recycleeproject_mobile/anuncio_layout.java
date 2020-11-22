@@ -20,19 +20,6 @@ public class anuncio_layout extends AppCompatActivity {
         NP = findViewById(R.id.NomeProduto);
         D = findViewById(R.id.Descricao);
 
-        Intent recebe = getIntent();
-
-        Bundle parametros = recebe.getExtras();
-
-        if(parametros != null){
-            nomeqp = parametros.getString("chave_titulo");
-            nomep = parametros.getString("chave_titulo");
-            desc = parametros.getString("chave_dproduto");
-        }
-
-        NQP.setText(nomep);
-        NP.setText(nomeqp);
-        D.setText(desc);
     }
 
 }

@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/iconeprojeto_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Excluir_Anuncio"></activity>
+        <activity android:name=".dialog_sidebar"></activity>
+        <activity android:name=".Excluir_Anuncio" />
         <activity android:name=".layout_dialog" />
         <activity android:name=".Activity_editar_anuncio" />
         <activity android:name=".meus_anuncios" />

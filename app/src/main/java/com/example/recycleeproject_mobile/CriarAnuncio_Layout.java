@@ -22,6 +22,7 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
     public String titulo,ncontato,dproduto;
     public EditText ctitulo,cncontato,cdproduto;
     private DatabaseReference databaseanuncio;
+    private DatabaseReference databaseanuncioh;
     public String idd;
 
 
@@ -36,6 +37,7 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
 
 
         databaseanuncio = FirebaseDatabase.getInstance().getReference("usuario").child(idd);
+        databaseanuncioh = FirebaseDatabase.getInstance().getReference("anuncio");
 
         mDialog = new Dialog(this);
         pbtn = (Button) findViewById(R.id.Publicar_Button);
@@ -89,5 +91,6 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
 
         anuncio anuncio = new anuncio(titulo, ncontato, dproduto);
         databaseanuncio.child("anuncios").child(titulo).setValue(anuncio);
+        databaseanuncioh.child(titulo).setValue(anuncio);
     }
 }
