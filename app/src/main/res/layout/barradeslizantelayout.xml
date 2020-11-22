@@ -2,48 +2,44 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="126dp"
-        android:layout_height="175dp"
+        android:id="@+id/View1"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedinputgreen"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/View1"
-            android:layout_width="105dp"
-            android:layout_height="105dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roundedinputgreen"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ImagemPC1"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:layout_margin="5dp"
-                app:srcCompat="@drawable/iconpc3" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/Text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:fontFamily="@font/montserrat2"
-            android:text="1 Placa Mãe"
-            android:textColor="#000000"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/SText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="Anderson Silva"
-            android:textColor="#000000"
-            android:textSize="10sp" />
+        <ImageView
+            android:id="@+id/ImagemPC1"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/iconpc3" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/montserrat2"
+        android:text="1 Placa Mãe"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Anderson Silva"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
 </LinearLayout>
