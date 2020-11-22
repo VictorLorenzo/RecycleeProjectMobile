@@ -46,12 +46,20 @@ sustentabilidade e otimização.
 <!--ts-->
 O público alvo do projeto é tanto empresas que procuram coletar sucatas para a reutilização, quanto pessoas que desejam descartar o seu lixo.
 
-## :recycle: **Integrantes
+## :recycle: **Integrantes**
 <ul>
  <li>Victor Lorenzo - Programador</li>
  <li>Washington Ântonio - Testador</li>
  <li>Débora Colier - Design</li>
 </ul>
+
+## :recycle: **Funcionalidades**
+<!--ts-->
+
+-[x] Cadastro de usuário
+-[x] Logar com usuário
+-[x] Criar Anúncio
+-[x] Visualizar anúncio
 
 
 
