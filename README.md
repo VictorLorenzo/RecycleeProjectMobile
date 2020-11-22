@@ -60,6 +60,7 @@ O público alvo do projeto é tanto empresas que procuram coletar sucatas para a
 - [x] Logar com usuário
 - [x] Criar Anúncio
 - [x] Visualizar anúncio
+- [x] Locais de reciclagem
 
 
 
