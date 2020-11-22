@@ -4,16 +4,25 @@
 
 <!--ts-->
   * [Descrição](#r-descrição)
+  * [Justificativa] (#r-justificativa)
   * [Públic Alvo](#r-público-alvo)
   * [Integrantes](#r-integrantes)
   * [Funcionalidades](#r-funcionalidades)
   * [Gerar Versão](#r-gerar-versão)
-<!--ts-->
 
 ## :recycle: **Descrição**
+<!--ts-->
 
-O descarte incorreto do lixo eletrônico pode acarretar diversos
-problemas ao meio amibente e aos seres vivos. Essa
-problemática do lixo eletrônico é muito atual na sociedade
-pois, conforme novas tecnologias vão surgindo, aumenta-se
-cada vez mais a quantidade de lixo eletrônico.
+
+Este projeto dedica-se ao estudo dos malefícios do lixo
+eletrônico, bem como as diversas questões referentes ao
+mesmo. Este material, comumente é despejado em espaços
+inapropriados ou em aterros sanitários. Quanto
+ao seu descarte incorreto, é possível afirmar que o maior
+obstáculo é, lidar com os resíduos tóxicos gerados pelo
+mantimento desses materiais em lixões, aterros sanitários e
+etc. Tais compostos, contaminam principalmente a água, o
+solo e o subsolo, por conta dos diversos metais pesados que
+possuem.
+
+
