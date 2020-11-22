@@ -3,4 +3,4 @@
 ## :star: **Recycle-e**
 
 <!--ts-->
-  * [descrição](#r-descrição)
+  * [Descrição](#r-descrição)
