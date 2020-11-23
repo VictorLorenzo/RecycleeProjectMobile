@@ -62,7 +62,18 @@ O público alvo do projeto é tanto empresas que procuram coletar sucatas para a
 - [x] Visualizar anúncio
 - [x] Locais de reciclagem
 
-![Cadastro](https://github.com/VictorLorenzo/RecycleeProjectMobile/blob/main/gifs_funcionando/anuncios.gif)
+![Cadastro](https://github.com/VictorLorenzo/RecycleeProjectMobile/blob/main/gifs_funcionando/cadastro.gif)
+======
+![Login](https://github.com/VictorLorenzo/RecycleeProjectMobile/blob/main/gifs_funcionando/login.gif)
+======
+![CriarAnuncio](https://github.com/VictorLorenzo/RecycleeProjectMobile/blob/main/gifs_funcionando/criaranuncio.gif)
+======
+![Anuncios](https://github.com/VictorLorenzo/RecycleeProjectMobile/blob/main/gifs_funcionando/anuncios.gif)
+======
+![Localidades](https://github.com/VictorLorenzo/RecycleeProjectMobile/blob/main/gifs_funcionando/localidades.gif)
+
+
+
 
 
 
