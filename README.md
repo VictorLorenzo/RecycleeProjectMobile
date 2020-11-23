@@ -62,7 +62,7 @@ O público alvo do projeto é tanto empresas que procuram coletar sucatas para a
 - [x] Visualizar anúncio
 - [x] Locais de reciclagem
 
-![Cadastro] (https://github.com/VictorLorenzo/RecycleeProjectMobile/blob/main/gifs_funcionando/Criar%20An%C3%BAncio.gif)
+![Cadastro](https://github.com/IanMarcony/Passa-Facil-App/blob/master/cadastro.gif)
 
 
 
