@@ -112,7 +112,8 @@
             android:layout_marginLeft="30dp"
             android:background="@drawable/roundedinput"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"/>
 
         <TextView
             android:id="@+id/textView12"
@@ -132,7 +133,8 @@
             android:layout_marginLeft="30dp"
             android:background="@drawable/roundedinput"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:paddingLeft="15dp"/>
 
         <TextView
             android:id="@+id/textView22"
@@ -154,7 +156,8 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:paddingLeft="15dp"/>
 
         <Button
             android:id="@+id/Publicar_Button"

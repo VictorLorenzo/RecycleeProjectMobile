@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -47,6 +48,10 @@ public class Home_layout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+        V7 = findViewById(R.id.LayoutLocalidades1);
+        V8 = findViewById(R.id.LayouLocalidades2);
+        V9 = findViewById(R.id.LayouLocalidades3);
+        mudartela();
 
         SharedPreferences preffs = getSharedPreferences("preferencias", Context.MODE_PRIVATE);
         id = preffs.getString("id", "não encontrado");
@@ -58,6 +63,31 @@ public class Home_layout extends AppCompatActivity {
         recyclerlixotela();
         recyclerlixomeus();
 
+
+    }
+
+    private void mudartela() {
+        V7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home_layout.this, Localidades.class);
+                startActivity(i);
+            }
+        });
+        V8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home_layout.this, Localidades.class);
+                startActivity(i);
+            }
+        });
+        V9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home_layout.this, Localidades.class);
+                startActivity(i);
+            }
+        });
 
     }
 
@@ -97,9 +127,21 @@ public class Home_layout extends AppCompatActivity {
         options=new FirebaseRecyclerOptions.Builder<anuncio>().setQuery(databaseReference, anuncio.class).build();
         adapter=new FirebaseRecyclerAdapter<anuncio, MyViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull anuncio model) {
+            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull final anuncio model) {
 
                 holder.textViewTitulo.setText(""+model.getTitulo());
+
+                holder.i1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), anuncio_layout.class);
+                        intent.putExtra("titulo", model.getTitulo());
+                        intent.putExtra("numeroc", model.getNumeroContato());
+                        intent.putExtra("descricao", model.getDescricao());
+                        startActivity(intent);
+
+                    }
+                });
 
             }
 

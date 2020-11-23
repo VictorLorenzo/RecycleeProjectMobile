@@ -35,6 +35,7 @@
                         android:id="@+id/imageView13"
                         android:layout_width="53dp"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
                         app:srcCompat="@drawable/sideline"
                         tools:ignore="VectorDrawableCompat" />
                 </LinearLayout>
@@ -241,6 +242,7 @@
                 android:weightSum="3">
 
                 <LinearLayout
+                    android:id="@+id/LayoutLocalidades1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
