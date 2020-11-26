@@ -2,16 +2,18 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_width="125dp"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    >
 
     <LinearLayout
         android:id="@+id/View1"
         android:layout_width="105dp"
         android:layout_height="105dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:background="@drawable/roundedinputgreen"
         android:orientation="vertical">
 
@@ -19,27 +21,26 @@
             android:id="@+id/ImagemPC1"
             android:layout_width="95dp"
             android:layout_height="95dp"
-            android:layout_margin="5dp"
             app:srcCompat="@drawable/iconpc3" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/Titulo"
-        android:layout_width="wrap_content"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
         android:fontFamily="@font/montserrat2"
         android:text="1 Placa Mãe"
         android:textColor="#000000"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_gravity="center"/>
 
     <TextView
-        android:id="@+id/Nome"
+        android:id="@+id/nomep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
         android:text="Anderson Silva"
         android:textColor="#000000"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

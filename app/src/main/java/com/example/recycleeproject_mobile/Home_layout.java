@@ -99,8 +99,19 @@ public class Home_layout extends AppCompatActivity {
         options2= new  FirebaseRecyclerOptions.Builder<anuncio>().setQuery(databaseReference2, anuncio.class).build();
         adapter2= new FirebaseRecyclerAdapter<anuncio, MyViewHolder>(options2) {
             @Override
-            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull anuncio model) {
+            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull final anuncio model) {
                 holder.textViewTitulo.setText(""+ model.getTitulo());
+
+                holder.i1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), meus_anuncios.class);
+                        intent.putExtra("titulo", model.getTitulo());
+                        intent.putExtra("numeroc", model.getNumeroContato());
+                        intent.putExtra("descricao", model.getDescricao());
+                        startActivity(intent);
+                    }
+                });
 
             }
 

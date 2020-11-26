@@ -13,11 +13,19 @@ public class meus_anuncios extends AppCompatActivity {
 
     public Button Edanuncio,Exanuncio;
     public Dialog mDialog;
+    private  String nomeqp,nomep,desc;
+    private TextView NQP,NP,D;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meus_anuncios);
+        NQP = findViewById(R.id.Nomeqp);
+        NP = findViewById(R.id.nomep);
+        D = findViewById(R.id.descricao);
+
+        colocarinfo();
+
 
         mDialog = new Dialog(this);
         Edanuncio = findViewById(R.id.Editar_Anuncio);
@@ -46,5 +54,15 @@ public class meus_anuncios extends AppCompatActivity {
                 mDialog.show();
             }
         });
+    }
+
+    private void colocarinfo() {
+        nomeqp = getIntent().getExtras().getString("titulo");
+        nomep = getIntent().getExtras().getString("titulo");
+        desc = getIntent().getExtras().getString("descricao");
+
+        NQP.setText(nomeqp);
+        NP.setText(nomep);
+        D.setText(desc);
     }
 }

@@ -5,8 +5,8 @@ public class anuncio {
     String NumeroContato;
     String Descricao;
 
-    public anuncio() {
 
+    public anuncio() {
     }
 
     public anuncio(String titulo, String numeroContato, String descricao) {

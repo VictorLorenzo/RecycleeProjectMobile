@@ -2,7 +2,6 @@ package com.example.recycleeproject_mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -16,9 +15,9 @@ public class anuncio_layout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anuncio_layout);
 
-        NQP = findViewById(R.id.NomeQ_produto);
+        NQP = findViewById(R.id.Nomeqp);
         NP = findViewById(R.id.NomeProduto);
-        D = findViewById(R.id.Descricao);
+        D = findViewById(R.id.descricao);
 
         nomeqp = getIntent().getExtras().getString("titulo");
         nomep = getIntent().getExtras().getString("titulo");

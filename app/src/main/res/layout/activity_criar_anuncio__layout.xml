@@ -50,7 +50,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/NomeQ_produto"
+                android:id="@+id/Nomeqp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat2"

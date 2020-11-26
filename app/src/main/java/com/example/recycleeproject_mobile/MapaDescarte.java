@@ -39,8 +39,8 @@ public class MapaDescarte extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-3.0660331, -60.0038638);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Descarte Correto"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng Descarte = new LatLng(-3.0658778, -60.0037823);
+        mMap.addMarker(new MarkerOptions().position(Descarte).title("Descarte Correto"));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Descarte, 18), 5000, null);
     }
 }
