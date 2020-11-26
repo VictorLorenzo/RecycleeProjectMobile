@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/ImagemPC1"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:srcCompat="@drawable/iconpc3" />
     </LinearLayout>
 

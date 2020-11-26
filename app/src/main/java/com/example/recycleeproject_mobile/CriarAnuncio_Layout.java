@@ -106,9 +106,6 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
                         ncontato = cncontato.getText().toString().trim();
                         dproduto = cdproduto.getText().toString().trim();
                         uploadFile();
-                        guardardados(titulo, ncontato, dproduto);
-
-
 
                         Intent i = new Intent(CriarAnuncio_Layout.this, Home_layout.class);
                         startActivity(i);
@@ -144,10 +141,9 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
                             @Override
                             public void onSuccess(Uri uri) {
                                 url = uri.toString();
-                                Log.e("TAG:", "the url is" + url);
-
-                                String ref = riversRef.getName();
-                                Log.e("TAG:", "the ref is: " + ref);
+                                anuncio anuncio = new anuncio(titulo, ncontato, dproduto, url);
+                                databaseanuncio.child("anuncios").child(titulo).setValue(anuncio);
+                                databaseanuncioh.child(titulo).setValue(anuncio);
                             }
                         });
 
@@ -184,12 +180,5 @@ public class CriarAnuncio_Layout extends AppCompatActivity {
 
 
         }
-    }
-
-    private void guardardados(String titulo, String ncontato, String dproduto) {
-
-        anuncio anuncio = new anuncio(titulo, ncontato, dproduto);
-        databaseanuncio.child("anuncios").child(titulo).setValue(anuncio);
-        databaseanuncioh.child(titulo).setValue(anuncio);
     }
 }

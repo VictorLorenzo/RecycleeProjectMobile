@@ -4,15 +4,16 @@ public class anuncio {
     String Titulo;
     String NumeroContato;
     String Descricao;
-
+    String url;
 
     public anuncio() {
     }
 
-    public anuncio(String titulo, String numeroContato, String descricao) {
+    public anuncio(String titulo, String numeroContato, String descricao, String url) {
         Titulo = titulo;
         NumeroContato = numeroContato;
         Descricao = descricao;
+        this.url = url;
     }
 
     public String getTitulo() {
@@ -37,5 +38,13 @@ public class anuncio {
 
     public void setDescricao(String descricao) {
         Descricao = descricao;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

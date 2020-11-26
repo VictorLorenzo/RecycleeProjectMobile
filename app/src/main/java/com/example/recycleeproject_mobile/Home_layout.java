@@ -28,6 +28,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class Home_layout extends AppCompatActivity {
 
@@ -102,6 +103,8 @@ public class Home_layout extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull final anuncio model) {
                 holder.textViewTitulo.setText(""+ model.getTitulo());
 
+                Picasso.get().load(model.getUrl()).into(holder.i1);
+
                 holder.i1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -109,6 +112,7 @@ public class Home_layout extends AppCompatActivity {
                         intent.putExtra("titulo", model.getTitulo());
                         intent.putExtra("numeroc", model.getNumeroContato());
                         intent.putExtra("descricao", model.getDescricao());
+                        intent.putExtra("url", model.getUrl());
                         startActivity(intent);
                     }
                 });
@@ -141,6 +145,7 @@ public class Home_layout extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull final anuncio model) {
 
                 holder.textViewTitulo.setText(""+model.getTitulo());
+                Picasso.get().load(model.getUrl()).into(holder.i1);
 
                 holder.i1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -149,6 +154,7 @@ public class Home_layout extends AppCompatActivity {
                         intent.putExtra("titulo", model.getTitulo());
                         intent.putExtra("numeroc", model.getNumeroContato());
                         intent.putExtra("descricao", model.getDescricao());
+                        intent.putExtra("url", model.getUrl());
                         startActivity(intent);
 
                     }
