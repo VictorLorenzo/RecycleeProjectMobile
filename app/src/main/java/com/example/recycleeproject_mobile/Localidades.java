@@ -2,7 +2,9 @@ package com.example.recycleeproject_mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +34,11 @@ public class Localidades extends AppCompatActivity {
         end = findViewById(R.id.enderecot);
         imagem = findViewById(R.id.ImagemLocal);
         nl = getIntent().getExtras().getInt("local");
+
+        SharedPreferences prefs = getSharedPreferences("localidades", Context.MODE_PRIVATE);
+        SharedPreferences.Editor ed = prefs.edit();
+        ed.putInt("nl", nl);
+        ed.apply();
 
         if(nl==1){
             nome.setText("Recicla Manaus");

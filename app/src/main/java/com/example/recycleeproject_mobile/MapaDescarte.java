@@ -2,6 +2,8 @@ package com.example.recycleeproject_mobile;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -11,14 +13,19 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
+
 public class MapaDescarte extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private  int nl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa_descarte);
+        SharedPreferences preffs = getSharedPreferences("localidades", Context.MODE_PRIVATE);
+        nl = preffs.getInt("nl", 0);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -41,10 +48,18 @@ public class MapaDescarte extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng Descarte = new LatLng(-3.0658778, -60.0037823);
         mMap.addMarker(new MarkerOptions().position(Descarte).title("Descarte Correto"));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Descarte, 18), 5000, null);
         LatLng ECORecicla = new LatLng(-3.1112368, -59.9429991);
         mMap.addMarker(new MarkerOptions().position(ECORecicla).title("Eco Recicla"));
         LatLng ReciclaManaus = new LatLng(-3.1150701, -59.9505738);
         mMap.addMarker(new MarkerOptions().position(ReciclaManaus).title("Recicla Manaus"));
+
+        if(nl==0){
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Descarte, 18), 5000, null);
+        } else if(nl==1){
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ReciclaManaus, 18), 5000, null);
+
+        }else if (nl==2){
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ECORecicla, 18), 5000, null);
+        }
     }
 }

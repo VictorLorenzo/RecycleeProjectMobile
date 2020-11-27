@@ -14,12 +14,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.Layout;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -29,16 +32,18 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
 public class Home_layout extends AppCompatActivity {
 
     public LinearLayout V7,V8,V9;
-    public String id;
     public LinearLayout sidebar;
     public Dialog mDialog;
-    public int nl=0;
+    public EditText Pesquisar;
 
+    public int nl=0, f=0;
+    public String id;
 
     public FirebaseRecyclerOptions<anuncio> options, options2;
     public FirebaseRecyclerAdapter<anuncio, MyViewHolder> adapter, adapter2;
@@ -51,6 +56,8 @@ public class Home_layout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+        Pesquisar = findViewById(R.id.PesquisarInput);
+
         V7 = findViewById(R.id.LayoutLocalidades1);
         V8 = findViewById(R.id.LayouLocalidades2);
         V9 = findViewById(R.id.LayouLocalidades3);
@@ -63,10 +70,36 @@ public class Home_layout extends AppCompatActivity {
         databaseReference2 = FirebaseDatabase.getInstance().getReference().child("usuario").child(id).child("anuncios");
 
         mostrasidebar();
-        recyclerlixotela();
+
+
+
+        Pesquisar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                f=1;
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.toString()!=null){
+                    recyclerlixotela(s.toString());
+                    f=1;
+                } else {
+                    f=0;
+                }
+            }
+        });
+
+        if(f!=1){
+            recyclerlixotela("");
+        }
+
         recyclerlixomeus();
-
-
     }
 
     private void mudartela() {
@@ -142,12 +175,18 @@ public class Home_layout extends AppCompatActivity {
 
     }
 
-    private void recyclerlixotela() {
+    private void recyclerlixotela(String data) {
+        Query query = databaseReference.orderByChild("titulo").startAt(data).endAt(data+"\uf8ff");
+
         recyclerView = findViewById(R.id.RecyclerLixo);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        options=new FirebaseRecyclerOptions.Builder<anuncio>().setQuery(databaseReference, anuncio.class).build();
+        if (f==1){
+            options=new FirebaseRecyclerOptions.Builder<anuncio>().setQuery(query, anuncio.class).build();
+        }else if(f==0){
+            options=new FirebaseRecyclerOptions.Builder<anuncio>().setQuery(databaseReference, anuncio.class).build();
+        }
         adapter=new FirebaseRecyclerAdapter<anuncio, MyViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull final anuncio model) {
