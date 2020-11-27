@@ -26,7 +26,7 @@ public class meus_anuncios extends AppCompatActivity {
         setContentView(R.layout.activity_meus_anuncios);
         NQP = findViewById(R.id.Nomeqp);
         NP = findViewById(R.id.nomep);
-        D = findViewById(R.id.descricao);
+        D = findViewById(R.id.descricaot);
         anunciomi = findViewById(R.id.meuanuncioimg);
 
         colocarinfo();

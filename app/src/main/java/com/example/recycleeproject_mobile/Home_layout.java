@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Layout;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,7 @@ public class Home_layout extends AppCompatActivity {
     public String id;
     public LinearLayout sidebar;
     public Dialog mDialog;
+    public int nl=0;
 
 
     public FirebaseRecyclerOptions<anuncio> options, options2;
@@ -71,21 +73,27 @@ public class Home_layout extends AppCompatActivity {
         V7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                nl=0;
                 Intent i = new Intent(Home_layout.this, Localidades.class);
+                i.putExtra("local", nl);
                 startActivity(i);
             }
         });
         V8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                nl=1;
                 Intent i = new Intent(Home_layout.this, Localidades.class);
+                i.putExtra("local", nl);
                 startActivity(i);
             }
         });
         V9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                nl=2;
                 Intent i = new Intent(Home_layout.this, Localidades.class);
+                i.putExtra("local", nl);
                 startActivity(i);
             }
         });
@@ -182,6 +190,7 @@ public class Home_layout extends AppCompatActivity {
     private void mostrasidebar() {
         sidebar = findViewById(R.id.sidebar);
         mDialog = new Dialog(this);
+        mDialog.getWindow().getAttributes().gravity = Gravity.START;
 
         sidebar.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -133,8 +133,9 @@
             android:layout_marginLeft="30dp"
             android:background="@drawable/roundedinput"
             android:ems="10"
+            android:hint="XXXXXXXXX"
             android:inputType="number"
-            android:paddingLeft="15dp"/>
+            android:paddingLeft="15dp" />
 
         <TextView
             android:id="@+id/textView22"

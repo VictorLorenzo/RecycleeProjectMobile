@@ -259,10 +259,10 @@
 
                         <ImageView
                             android:id="@+id/ImagemPC7"
-                            android:layout_width="85dp"
-                            android:layout_height="85dp"
-                            android:layout_margin="10dp"
-                            app:srcCompat="@drawable/iconlocal" />
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="6dp"
+                            app:srcCompat="@drawable/descarte_correto" />
                     </LinearLayout>
 
                     <TextView
@@ -303,10 +303,10 @@
 
                         <ImageView
                             android:id="@+id/ImagemPC8"
-                            android:layout_width="85dp"
-                            android:layout_height="85dp"
-                            android:layout_margin="10dp"
-                            app:srcCompat="@drawable/iconlocal" />
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="6dp"
+                            app:srcCompat="@drawable/recicla_manaus" />
                     </LinearLayout>
 
                     <TextView
@@ -315,7 +315,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:fontFamily="@font/montserrat2"
-                        android:text="Descarte Correto"
+                        android:text="Recicla Manaus"
                         android:textColor="#000000"
                         android:textSize="14sp" />
 
@@ -347,10 +347,10 @@
 
                         <ImageView
                             android:id="@+id/ImagemPC9"
-                            android:layout_width="85dp"
-                            android:layout_height="85dp"
-                            android:layout_margin="10dp"
-                            app:srcCompat="@drawable/iconlocal" />
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="6dp"
+                            app:srcCompat="@drawable/eco_recicla" />
                     </LinearLayout>
 
                     <TextView
@@ -359,7 +359,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:fontFamily="@font/montserrat2"
-                        android:text="Descarte Correto"
+                        android:text="ECO RECICLA"
                         android:textColor="#000000"
                         android:textSize="14sp" />
 

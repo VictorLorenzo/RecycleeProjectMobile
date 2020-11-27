@@ -122,7 +122,7 @@
                 android:textSize="13sp" />
 
             <TextView
-                android:id="@+id/descricao"
+                android:id="@+id/descricaot"
                 android:layout_width="277dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

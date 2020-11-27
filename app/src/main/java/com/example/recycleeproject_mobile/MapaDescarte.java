@@ -42,5 +42,9 @@ public class MapaDescarte extends FragmentActivity implements OnMapReadyCallback
         LatLng Descarte = new LatLng(-3.0658778, -60.0037823);
         mMap.addMarker(new MarkerOptions().position(Descarte).title("Descarte Correto"));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Descarte, 18), 5000, null);
+        LatLng ECORecicla = new LatLng(-3.1112368, -59.9429991);
+        mMap.addMarker(new MarkerOptions().position(ECORecicla).title("Eco Recicla"));
+        LatLng ReciclaManaus = new LatLng(-3.1150701, -59.9505738);
+        mMap.addMarker(new MarkerOptions().position(ReciclaManaus).title("Recicla Manaus"));
     }
 }
